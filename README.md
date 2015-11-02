@@ -1,8 +1,9 @@
 # angularMask
 Input mask using directive
 
-using 
+copy the maskDir.js to your Directive
 
+####using 
 var app = angular.module('app', []); // You app
 
 #####Declare of mask
