@@ -1,0 +1,25 @@
+function maskDir() {
+    return {
+        scope: {
+            maskinput: '@'
+        },
+        link : function(scope, element, attrs) {
+            var options = {
+                onKeyPress: function(val, e, field, options) {
+                    putMask();
+                }
+            }
+
+            $(element).mask(scope.maskinput, options);
+
+            //console.log(scope.maskinput); To debug
+
+            function putMask() {
+                var mask;
+                var cleanVal = element[0].value.replace(/\D/g, '');
+                mask = scope.maskinput;
+                $(element).mask(mask, options);//Apply mask
+            }
+        }
+    }
+};
