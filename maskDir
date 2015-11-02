@@ -1,35 +1,39 @@
 function maskDir() {
     return {
         scope: {
-            maskinput: '@'
+            ngModel: '=',
+            maskDir: '@'
         },
-        link : function(scope, element, attrs) {
+        replace: true,
+        link: function(scope, element, attrs) {
 
+            console.log(scope.maskDir);
+            if(scope.maskDir == 'money'){
+                $(element).bind('keyup', function(e) {
+                    var input = element.find('input');
+                    var inputVal = input.val();
 
+                    var v = scope.ngModel;
+                    v=v.replace(/\D/g,'');
+                    v=v.replace(/(\d{2})$/, ',$1');
+                    v=v.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+                    v = v != ''?v:'';
 
-            var options = {
-                onKeyPress: function(val, e, field, options) {
-                    putMask();
-                }
+                    scope.$apply(function() {scope.ngModel = v});
+
+                });
+            }else{
+                scope.$watch('maskDir', function(newValue, oldValue) {
+                    if (newValue !== oldValue) {
+                        $(element).mask(newValue, options);
+                    }
+                }, true);
+
+                $(element).mask(scope.maskDir);
             }
 
-            scope.$watch('maskinput', function(newValue, oldValue) {
-                if (newValue !== oldValue) {
-                    $(element).mask(newValue, options);
-                }
-            }, true);
 
-            $(element).mask(scope.maskinput, options);
-
-
-
-            function putMask() {
-
-                var mask;
-                var cleanVal = element[0].value.replace(/\D/g, '');
-                mask = scope.maskinput;
-                $(element).mask(mask, options);//Apply mask
-            }
         }
-    }
+    };
+    
 };
