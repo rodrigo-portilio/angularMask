@@ -10,6 +10,10 @@ var app = angular.module('app', []); // You app
 app.directive("maskDir", require('./directive/maskDir'));
 
 ###Example:
-input type="text" class="form-control" mask-dir maskinput="999.999.999-99"
+MASK
+input type="text" class="form-control" mask-dir="999.999.999-99"
+
+MONEY
+input type="text" class="form-control" mask-dir="money"
 
 You like? Donate in PAYPAL to rodrigo.portilio@outlook.com
