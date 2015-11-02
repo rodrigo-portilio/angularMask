@@ -7,7 +7,7 @@ function maskDir() {
         replace: true,
         link: function(scope, element, attrs) {
 
-            //console.log(scope.maskDir); //Debug
+            //console.log(scope.maskDir);//Debug
             if(scope.maskDir == 'money'){
                 $(element).bind('keyup', function(e) {
                     var input = element.find('input');
@@ -25,7 +25,7 @@ function maskDir() {
             }else{
                 scope.$watch('maskDir', function(newValue, oldValue) {
                     if (newValue !== oldValue) {
-                        $(element).mask(newValue, options);
+                        $(element).mask(newValue);
                     }
                 }, true);
 
