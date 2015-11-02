@@ -7,7 +7,7 @@ function maskDir() {
         replace: true,
         link: function(scope, element, attrs) {
 
-            console.log(scope.maskDir);
+            //console.log(scope.maskDir); //Debug
             if(scope.maskDir == 'money'){
                 $(element).bind('keyup', function(e) {
                     var input = element.find('input');
