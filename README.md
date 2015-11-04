@@ -1,19 +1,18 @@
 # angularMask
 Input mask using directive
 
-copy the maskDir.js to your Directive
+You can get it npm
+
+npm install angular-sky-mask --save
 
 ####using 
-var app = angular.module('app', []); // You app
-
-#####Declare of mask
-app.directive("maskDir", require('./directive/maskDir'));
+var app = angular.module('app', ['skyang.mask',...]); 
 
 ###Example:
 MASK
-input type="text" class="form-control" mask-dir="999.999.999-99"
+input type="text" class="form-control" skyangMask="999.999.999-99"
 
 MONEY
-input type="text" class="form-control" mask-dir="money"
+input type="text" class="form-control" skyangMask="money"
 
 You like? Donate in PAYPAL to rodrigo.portilio@outlook.com
