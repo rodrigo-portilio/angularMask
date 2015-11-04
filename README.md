@@ -1,9 +1,17 @@
 # angularMask
-Input mask using directive
+
+Input mask
+
+## Requirements
+
+- AngularJS
+
+## Usage
 
 You can get it npm
-
+```sh
 npm install angular-sky-mask --save
+```
 
 ####using 
 var app = angular.module('app', ['skyang.mask',...]); 
