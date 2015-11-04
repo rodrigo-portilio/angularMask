@@ -9,8 +9,7 @@ angular.module('skyang.mask', [])
             },
             replace: true,
             link: function(scope, element, attrs) {
-
-                console.log('acessando');//Debug
+                
                 if(scope.skyangMask == 'money'){
                     $(element).bind('keyup', function(e) {
                         var input = element.find('input');

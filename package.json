@@ -1,6 +1,6 @@
 {
   "name": "angular-sky-mask",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Input mask using directive",
   "main": "src/mask.js",
   "scripts": {
