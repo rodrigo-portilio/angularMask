@@ -2,7 +2,7 @@
   "name": "angular-mask",
   "version": "1.0.0",
   "description": "Input mask using directive",
-  "main": "index.js",
+  "main": "src/maskDir.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,7 @@
 	"formatter"	
   ],
   "author": "Rodrigo Portilio",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fanmax/angularMask/issues"
   },

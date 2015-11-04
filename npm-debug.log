@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'G:\\Work\\rodrigo\\_npms\\angularMask',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\Rodrigo\\AppData\\Roaming\\npm-cache\\angular-mask\\1.0.0\\package.tgz',
+9 verbose tar pack   'G:\\Work\\rodrigo\\_npms\\angularMask' ]
+10 verbose tarball C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package.tgz
+11 verbose folder G:\Work\rodrigo\_npms\angularMask
+12 info prepublish angular-mask@1.0.0
+13 verbose addLocalTarball adding from inside cache C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package.tgz
+14 silly cache afterAdd angular-mask@1.0.0
+15 verbose afterAdd C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package\package.json written
+17 silly publish { name: 'angular-mask',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'Input mask using directive',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/fanmax/angularMask.git' },
+17 silly publish   keywords: [ 'mask', 'formatter' ],
+17 silly publish   author: { name: 'Rodrigo Portilio' },
+17 silly publish   license: 'ISC',
+17 silly publish   bugs: { url: 'https://github.com/fanmax/angularMask/issues' },
+17 silly publish   homepage: 'https://github.com/fanmax/angularMask#readme',
+17 silly publish   readme: '# angularMask\r\nInput mask using directive\r\n\r\ncopy the maskDir.js to your Directive\r\n\r\n####using \r\nvar app = angular.module(\'app\', []); // You app\r\n\r\n#####Declare of mask\r\napp.directive("maskDir", require(\'./directive/maskDir\'));\r\n\r\n###Example:\r\nMASK\r\ninput type="text" class="form-control" mask-dir="999.999.999-99"\r\n\r\nMONEY\r\ninput type="text" class="form-control" mask-dir="money"\r\n\r\nYou like? Donate in PAYPAL to rodrigo.portilio@outlook.com\r\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: '5fa019d597e0e03b75e67a741237253a41fd673d',
+17 silly publish   _id: 'angular-mask@1.0.0',
+17 silly publish   _shasum: '16cdabf7f2dea63a4fd776b13cac65ef4a9e8103',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name angular-mask
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/angular-mask
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\Rodrigo\AppData\Roaming\npm-cache\angular-mask\1.0.0\package.tgz
+25 verbose request uri https://registry.npmjs.org/angular-mask
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 22:06:16
+28 verbose request using bearer token for auth
+29 verbose request id 5d57f0441e7df969
+30 http request PUT https://registry.npmjs.org/angular-mask
+31 http 403 https://registry.npmjs.org/angular-mask
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '104',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 04 Nov 2015 01:06:35 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-jfk1028-JFK',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1446599195.425593,VS0,VE318' }
+33 verbose request invalidating C:\Users\Rodrigo\AppData\Roaming\npm-cache\registry.npmjs.org\angular-mask on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: You do not have permission to publish 'angular-mask'. Are you logged in as the correct user? : angular-mask
+35 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:263:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:251:14)
+35 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:171:14)
+35 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1073:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1019:12)
+36 verbose statusCode 403
+37 verbose pkgid angular-mask
+38 verbose cwd G:\Work\rodrigo\_npms\angularMask
+39 error Windows_NT 10.0.10240
+40 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+41 error node v4.1.1
+42 error npm  v2.14.4
+43 error code E403
+44 error You do not have permission to publish 'angular-mask'. Are you logged in as the correct user? : angular-mask
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
